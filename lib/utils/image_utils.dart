@@ -6,22 +6,6 @@ import 'package:path/path.dart' as p;
 class ImageUtils {
   ImageUtils._();
 
-  /// Obtiene el tamaño del archivo en KB
-  static Future<double> getFileSizeInKB(String filePath) async {
-    final File file = File(filePath);
-    if (!await file.exists()) {
-      return 0.0;
-    }
-    final int bytes = await file.length();
-    return bytes / 1024; // Convertir bytes a KB
-  }
-
-  /// Obtiene el tamaño del archivo en KB (formato legible)
-  static Future<String> getFileSizeInKBString(String filePath) async {
-    final double sizeKB = await getFileSizeInKB(filePath);
-    return '${sizeKB.toStringAsFixed(2)} KB';
-  }
-
   static Future<XFile> compressImage({
     required File imageFile,
     int quality = 30,

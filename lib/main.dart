@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:mini_flutter_proyect/firebase_options.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:mini_flutter_proyect/config/firebase_config.dart';
 import 'package:mini_flutter_proyect/navigation/app_routes.dart';
 import 'package:mini_flutter_proyect/provider/location_provider.dart';
 import 'package:mini_flutter_proyect/provider/shared_location_provider.dart';
@@ -13,7 +14,11 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  
+  // Load environment variables
+  await dotenv.load(fileName: ".env");
+  
+  await Firebase.initializeApp(options: FirebaseConfig.currentPlatform);
 
   // Inicializar servicio de notificaciones con el navigatorKey
   await NotificationService.initialize(navigatorKey: navigatorKey);

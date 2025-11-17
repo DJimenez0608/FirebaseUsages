@@ -43,3 +43,20 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Environment variables and sensitive files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Firebase configuration files (contain API keys)
+# These should be generated locally or from environment variables
+lib/firebase_options.dart
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Local properties (contains user-specific paths)
+android/local.properties
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
