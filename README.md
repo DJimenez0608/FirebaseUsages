@@ -179,11 +179,6 @@ flutter run
 flutter build apk --release
 ```
 
-### Build para iOS
-
-```bash
-flutter build ios --release
-```
 
 ## 🔐 Seguridad
 
@@ -213,11 +208,7 @@ Los usuarios pueden activar/desactivar el compartimiento de su ubicación median
 - Al hacer clic en la notificación, la app navega al mapa y comienza a seguir al usuario
 - Las notificaciones funcionan tanto en primer plano como en segundo plano
 
-## 🧪 Testing
 
-```bash
-flutter test
-```
 
 ## 📝 Licencia
 
@@ -241,7 +232,4 @@ Las contribuciones son bienvenidas. Por favor:
 ## 📞 Soporte
 
 Si tienes preguntas o encuentras algún problema, por favor abre un issue en el repositorio.
-
----
-
-⭐ Si te gusta este proyecto, ¡dale una estrella!
+ecto, ¡dale una estrella!
